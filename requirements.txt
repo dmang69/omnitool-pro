@@ -7,7 +7,7 @@ tkinter-tooltip>=2.1.0
 
 # Device Communication
 adb-shell>=0.4.4
-pure-python-adb>=0.3.0
+pure-python-adb>=0.3.0.dev0
 pyserial>=3.5
 
 # AI Integration
