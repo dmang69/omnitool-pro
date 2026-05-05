@@ -1,0 +1,38 @@
+ai_toolkit/
+├── main.py
+├── requirements.txt
+├── README.md
+├── config/
+│   └── default.yaml
+├── toolkit/
+│   ├── __init__.py
+│   ├── filesystem.py
+│   ├── code_understanding.py
+│   ├── automation.py
+│   ├── mobile_repair.py
+│   └── security.py
+├── agents/
+│   ├── __init__.py
+│   ├── tool_interface.py
+│   └── chat_agent.py
+├── plugins/
+│   ├── __init__.py
+│   ├── loader.py
+│   └── example_plugin/
+│       ├── __init__.py
+│       └── plugin.py
+├── utils/
+│   ├── __init__.py
+│   ├── json_response.py
+│   ├── logger.py
+│   ├── config.py
+│   ├── security.py
+│   └── path_utils.py
+├── gui/
+│   ├── __init__.py
+│   └── chat_window.py
+├── tests/
+│   ├── __init__.py
+│   └── test_basic.py
+└── build/
+    └── build_windows.bat

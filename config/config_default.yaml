@@ -1,0 +1,67 @@
+toolkit:
+  version: "2.0.0"
+  name: "AI Developer Toolkit"
+  sandbox_enabled: true
+  max_file_size_mb: 50
+  allowed_extensions:
+    - ".py"
+    - ".txt"
+    - ".md"
+    - ".json"
+    - ".yaml"
+    - ".yml"
+    - ".sh"
+    - ".bat"
+    - ".xml"
+    - ".cfg"
+    - ".ini"
+
+security:
+  restricted_commands:
+    - "rm -rf /"
+    - "del /s /q C:\\"
+    - "format"
+    - "mkfs"
+    - "dd if="
+    - "> /dev/sda"
+  allowed_paths: []
+  audit_logging: true
+
+android:
+  adb_path: "adb"
+  fastboot_path: "fastboot"
+  platform_tools_dir: "platform-tools"
+  default_timeout: 30
+  device_info_fields:
+    - "ro.product.model"
+    - "ro.build.version.release"
+    - "ro.build.display.id"
+    - "ro.product.brand"
+    - "ro.product.manufacturer"
+    - "ro.serialno"
+    - "ro.product.cpu.abilist"
+
+ios:
+  ideviceinfo_path: "ideviceinfo"
+  idevice_id_path: "idevice_id"
+  idevicebackup_path: "idevicebackup2"
+  idevicesyslog_path: "idevicesyslog"
+  default_timeout: 30
+
+plugins:
+  auto_discover: true
+  hot_load: true
+  plugin_dirs:
+    - "plugins"
+  registry_path: "plugins/registry.json"
+
+logging:
+  level: "INFO"
+  log_file: "toolkit.log"
+  max_bytes: 10485760
+  backup_count: 5
+
+chat:
+  history_file: "chat_history.json"
+  max_history: 1000
+  response_timeout: 30

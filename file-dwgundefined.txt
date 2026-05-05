@@ -1,0 +1,24 @@
+# AI Developer Toolkit
+
+A comprehensive Python toolkit for AI-assisted development and device management.
+Features file operations, code analysis, automation, Android/iOS device management,
+and an extensible plugin system with an interactive chat interface.
+
+## Features
+
+- **File Operations**: Read, write, search, and manage files safely
+- **Code Understanding**: AST parsing, module analysis, test generation
+- **Automation**: Script execution, package management, command automation
+- **Android Management**: ADB-based device diagnostics, screenshots, logcat
+- **iOS Management**: libimobiledevice-based device info and diagnostics
+- **Device Repair**: Bootloop diagnosis, soft brick recovery guides
+- **Security Auditing**: Device security posture assessment
+- **Plugin System**: Extensible architecture for custom tools
+- **Chat Interface**: Interactive AI assistant for all operations
+- **Windows EXE**: Buildable as a standalone Windows executable
+
+## Quick Start
+
+### Installation
+```bash
+pip install -r requirements.txt

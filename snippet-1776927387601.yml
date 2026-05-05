@@ -1,0 +1,64 @@
+toolkit:
+  name: "AI Developer Toolkit"
+  version: "1.0.0"
+
+filesystem:
+  sandbox_root: "."
+  max_depth: 15
+  excluded_dirs:
+    - ".git"
+    - "__pycache__"
+    - "node_modules"
+    - ".venv"
+    - "venv"
+  excluded_extensions:
+    - ".pyc"
+    - ".pyo"
+    - ".exe"
+    - ".dll"
+  max_file_size_mb: 50
+  snapshot_dir: ".snapshots"
+
+code_understanding:
+  supported_extensions:
+    - ".py"
+    - ".js"
+    - ".ts"
+    - ".java"
+    - ".go"
+  max_lines_for_summary: 5000
+  docstring_style: "google"
+
+automation:
+  sandbox_enabled: true
+  allowed_commands:
+    - "python"
+    - "pip"
+    - "git"
+    - "pytest"
+    - "black"
+    - "ruff"
+    - "mypy"
+  subprocess_timeout: 120
+  max_concurrent_tasks: 4
+
+plugins:
+  discovery_dir: "plugins"
+  auto_load: true
+  compatibility_version: "1.0"
+
+security:
+  path_sandboxing: true
+  restricted_paths:
+    - "C:\\Windows"
+    - "/etc"
+    - "/usr/bin"
+  audit_log: "logs/audit.log"
+  max_log_size_mb: 25
+
+logging:
+  level: "INFO"
+  file: "logs/toolkit.log"
+  format: "%(asctime)s | %(name)-22s | %(levelname)-7s | %(message)s"
+  max_bytes: 10485760
+  backup_count: 5

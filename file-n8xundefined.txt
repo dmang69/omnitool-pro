@@ -1,0 +1,34 @@
+toolkit:
+  name: "Legitimate Device Repair Toolkit"
+  version: "1.0.0"
+
+filesystem:
+  sandbox_root: "."
+  max_depth: 10
+  excluded_dirs:
+    - ".git"
+    - "__pycache__"
+  excluded_extensions:
+    - ".pyc"
+
+automation:
+  sandbox_enabled: true
+  allowed_commands:
+    - "adb"
+    - "fastboot"
+    - "powercfg"
+    - "wmic"
+  subprocess_timeout: 30
+  max_concurrent_tasks: 4
+
+security:
+  path_sandboxing: true
+  restricted_paths:
+    - "C:\\Windows"
+    - "/etc"
+  audit_log: "logs/audit.log"
+
+logging:
+  level: "INFO"
+  file: "logs/toolkit.log"
+  format: "%(asctime)s | %(name)-22s | %(levelname)-7s | %(message)s"
